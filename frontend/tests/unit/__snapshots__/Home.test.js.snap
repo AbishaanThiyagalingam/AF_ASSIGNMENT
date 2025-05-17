@@ -1,0 +1,739 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Component matches snapshot when logged in 1`] = `
+<DocumentFragment>
+  <div
+    class="min-h-screen bg-gray-50"
+  >
+    <nav
+      class="bg-white shadow-md sticky top-0 z-50"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
+        <div
+          class="flex justify-between h-16"
+        >
+          <div
+            class="flex items-center"
+          >
+            <a
+              class="text-2xl font-bold text-indigo-600"
+              data-discover="true"
+              href="/"
+            >
+              TRAVEL
+            </a>
+          </div>
+          <div
+            class="hidden md:flex items-center space-x-8"
+          >
+            <a
+              class="text-gray-700 hover:text-indigo-600 font-medium"
+              data-discover="true"
+              href="/"
+            >
+              Home
+            </a>
+            <a
+              class="text-gray-700 hover:text-indigo-600 font-medium"
+              data-discover="true"
+              href="/Like"
+            >
+              Liked
+            </a>
+            <a
+              class="text-gray-700 hover:text-indigo-600 font-medium"
+              data-discover="true"
+              href="/Wishlist"
+            >
+              Wishlist
+            </a>
+            <button
+              class="text-gray-700 hover:text-indigo-600 font-medium"
+            >
+              Logout
+            </button>
+          </div>
+          <div
+            class="md:hidden flex items-center"
+          >
+            <button
+              class="text-gray-500 hover:text-gray-900 focus:outline-none"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M4 6h16M4 12h16M4 18h16"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="relative bg-cover bg-center text-white"
+      style="background-image: url(test-image-stub); background-size: cover; background-position: center center; height: 90vh;"
+    >
+      <div
+        class="absolute inset-0 bg-black opacity-40"
+      />
+      <div
+        class="relative max-w-7xl mx-auto px-4 py-32 sm:px-6 lg:px-8"
+      >
+        <h1
+          class="text-4xl md:text-6xl font-extrabold mb-6"
+        >
+          EXPLORE YOUR DREAM DESTINATIONS
+        </h1>
+        <h2
+          class="text-3xl md:text-5xl font-bold mb-8"
+        >
+          ADD THEM TO YOUR WISHLIST
+        </h2>
+        <p
+          class="text-xl max-w-2xl mb-8"
+        >
+          From tropical beaches to snowy mountains, create your personalized travel wishlist and start your global adventure.
+        </p>
+        <button
+          class="mt-4 px-6 py-3 font-semibold rounded-lg shadow-lg transition-all duration-300 bg-white text-indigo-900 hover:bg-gray-100"
+        >
+          Discover the World
+        </button>
+      </div>
+    </div>
+    <div
+      class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8"
+    >
+      <h2
+        class="text-3xl font-bold text-center mb-12"
+      >
+        WHAT THE WORLD HAS TO SAY
+      </h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+        >
+          <div
+            class="flex items-center mb-4"
+          >
+            <img
+              alt="Emily"
+              class="h-12 w-12 rounded-full mr-4 object-cover"
+              src="test-image-stub"
+            />
+            <div>
+              <h4
+                class="font-semibold text-lg"
+              >
+                Emily
+              </h4>
+              <p
+                class="text-gray-500 text-sm"
+              >
+                From Canada
+              </p>
+            </div>
+          </div>
+          <p
+            class="text-gray-700 text-lg"
+          >
+            "This site helped me plan my dream trip to Bali! The wishlist made it easy to keep track of all the places I wanted to go."
+          </p>
+        </div>
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+        >
+          <div
+            class="flex items-center mb-4"
+          >
+            <img
+              alt="Liam"
+              class="h-12 w-12 rounded-full mr-4 object-cover"
+              src="test-image-stub"
+            />
+            <div>
+              <h4
+                class="font-semibold text-lg"
+              >
+                Liam
+              </h4>
+              <p
+                class="text-gray-500 text-sm"
+              >
+                From Australia
+              </p>
+            </div>
+          </div>
+          <p
+            class="text-gray-700 text-lg"
+          >
+            "I discovered so many hidden gems across Europe. Now my wishlist is full, and I couldn't be more excited!"
+          </p>
+        </div>
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+        >
+          <div
+            class="flex items-center mb-4"
+          >
+            <img
+              alt="Aisha"
+              class="h-12 w-12 rounded-full mr-4 object-cover"
+              src="test-image-stub"
+            />
+            <div>
+              <h4
+                class="font-semibold text-lg"
+              >
+                Aisha
+              </h4>
+              <p
+                class="text-gray-500 text-sm"
+              >
+                From UAE
+              </p>
+            </div>
+          </div>
+          <p
+            class="text-gray-700 text-lg"
+          >
+            "It's like having a personalized travel guide! I love how easy it is to find and save new destinations."
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="bg-indigo-50 py-16"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
+        <h2
+          class="text-3xl font-bold text-center mb-12"
+        >
+          UPCOMING EVENTS
+        </h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+          >
+            <img
+              alt="World Travel Expo 2025"
+              class="h-48 w-full object-cover"
+              src="test-image-stub"
+            />
+            <div
+              class="p-6"
+            >
+              <h3
+                class="text-xl font-semibold mb-2"
+              >
+                World Travel Expo 2025
+              </h3>
+              <p
+                class="text-gray-500 mb-4"
+              >
+                Date: June 15, 2025
+              </p>
+              <p
+                class="text-gray-700 mb-4"
+              >
+                Join thousands of travelers and tourism experts at the global expo in Berlin. Discover new destinations and experiences!
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+          >
+            <img
+              alt="Tokyo Cherry Blossom Festival"
+              class="h-48 w-full object-cover"
+              src="test-image-stub"
+            />
+            <div
+              class="p-6"
+            >
+              <h3
+                class="text-xl font-semibold mb-2"
+              >
+                Tokyo Cherry Blossom Festival
+              </h3>
+              <p
+                class="text-gray-500 mb-4"
+              >
+                Date: March 25, 2025
+              </p>
+              <p
+                class="text-gray-700 mb-4"
+              >
+                Experience the breathtaking beauty of cherry blossoms in full bloom across Japan's capital city.
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+          >
+            <img
+              alt="Rio Carnival Experience"
+              class="h-48 w-full object-cover"
+              src="test-image-stub"
+            />
+            <div
+              class="p-6"
+            >
+              <h3
+                class="text-xl font-semibold mb-2"
+              >
+                Rio Carnival Experience
+              </h3>
+              <p
+                class="text-gray-500 mb-4"
+              >
+                Date: February 10, 2025
+              </p>
+              <p
+                class="text-gray-700 mb-4"
+              >
+                Add the vibrant Rio Carnival to your wishlist and dance your way through the most colorful celebration in the world!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="bg-gray-50 dark:bg-gray-900 mt-auto"
+    >
+      <div
+        class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8"
+      >
+        <div
+          class="md:flex md:justify-between"
+        >
+          <div
+            class="mb-6 md:mb-0"
+          >
+            <span
+              class="text-sm text-gray-500 dark:text-gray-400"
+            >
+              © 2025 
+              <a
+                class="hover:underline"
+                href="mailto:abishaan.thiyagalingam@gmail.com"
+              >
+                Abishaan Thiyagalingam
+              </a>
+              . All Rights Reserved.
+            </span>
+          </div>
+          <div
+            class="flex space-x-6"
+          >
+            <a
+              class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+              href="mailto:abishaan.thiyagalingam@gmail.com"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Email
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Home Component matches snapshot when logged out 1`] = `
+<DocumentFragment>
+  <div
+    class="min-h-screen bg-gray-50"
+  >
+    <nav
+      class="bg-white shadow-md sticky top-0 z-50"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
+        <div
+          class="flex justify-between h-16"
+        >
+          <div
+            class="flex items-center"
+          >
+            <a
+              class="text-2xl font-bold text-indigo-600"
+              data-discover="true"
+              href="/"
+            >
+              TRAVEL
+            </a>
+          </div>
+          <div
+            class="hidden md:flex items-center space-x-8"
+          >
+            <a
+              class="text-gray-700 hover:text-indigo-600 font-medium"
+              data-discover="true"
+              href="/"
+            >
+              Home
+            </a>
+            <a
+              class="text-gray-700 hover:text-indigo-600 font-medium"
+              data-discover="true"
+              href="/login"
+            >
+              Login
+            </a>
+            <a
+              class="text-gray-700 hover:text-indigo-600 font-medium"
+              data-discover="true"
+              href="/register"
+            >
+              Sign Up
+            </a>
+          </div>
+          <div
+            class="md:hidden flex items-center"
+          >
+            <button
+              class="text-gray-500 hover:text-gray-900 focus:outline-none"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M4 6h16M4 12h16M4 18h16"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="relative bg-cover bg-center text-white"
+      style="background-image: url(test-image-stub); background-size: cover; background-position: center center; height: 90vh;"
+    >
+      <div
+        class="absolute inset-0 bg-black opacity-40"
+      />
+      <div
+        class="relative max-w-7xl mx-auto px-4 py-32 sm:px-6 lg:px-8"
+      >
+        <h1
+          class="text-4xl md:text-6xl font-extrabold mb-6"
+        >
+          EXPLORE YOUR DREAM DESTINATIONS
+        </h1>
+        <h2
+          class="text-3xl md:text-5xl font-bold mb-8"
+        >
+          ADD THEM TO YOUR WISHLIST
+        </h2>
+        <p
+          class="text-xl max-w-2xl mb-8"
+        >
+          From tropical beaches to snowy mountains, create your personalized travel wishlist and start your global adventure.
+        </p>
+        <button
+          class="mt-4 px-6 py-3 font-semibold rounded-lg shadow-lg transition-all duration-300 bg-gray-400 text-gray-700 cursor-not-allowed"
+          disabled=""
+        >
+          Log in to Discover
+        </button>
+      </div>
+    </div>
+    <div
+      class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8"
+    >
+      <h2
+        class="text-3xl font-bold text-center mb-12"
+      >
+        WHAT THE WORLD HAS TO SAY
+      </h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+        >
+          <div
+            class="flex items-center mb-4"
+          >
+            <img
+              alt="Emily"
+              class="h-12 w-12 rounded-full mr-4 object-cover"
+              src="test-image-stub"
+            />
+            <div>
+              <h4
+                class="font-semibold text-lg"
+              >
+                Emily
+              </h4>
+              <p
+                class="text-gray-500 text-sm"
+              >
+                From Canada
+              </p>
+            </div>
+          </div>
+          <p
+            class="text-gray-700 text-lg"
+          >
+            "This site helped me plan my dream trip to Bali! The wishlist made it easy to keep track of all the places I wanted to go."
+          </p>
+        </div>
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+        >
+          <div
+            class="flex items-center mb-4"
+          >
+            <img
+              alt="Liam"
+              class="h-12 w-12 rounded-full mr-4 object-cover"
+              src="test-image-stub"
+            />
+            <div>
+              <h4
+                class="font-semibold text-lg"
+              >
+                Liam
+              </h4>
+              <p
+                class="text-gray-500 text-sm"
+              >
+                From Australia
+              </p>
+            </div>
+          </div>
+          <p
+            class="text-gray-700 text-lg"
+          >
+            "I discovered so many hidden gems across Europe. Now my wishlist is full, and I couldn't be more excited!"
+          </p>
+        </div>
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+        >
+          <div
+            class="flex items-center mb-4"
+          >
+            <img
+              alt="Aisha"
+              class="h-12 w-12 rounded-full mr-4 object-cover"
+              src="test-image-stub"
+            />
+            <div>
+              <h4
+                class="font-semibold text-lg"
+              >
+                Aisha
+              </h4>
+              <p
+                class="text-gray-500 text-sm"
+              >
+                From UAE
+              </p>
+            </div>
+          </div>
+          <p
+            class="text-gray-700 text-lg"
+          >
+            "It's like having a personalized travel guide! I love how easy it is to find and save new destinations."
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="bg-indigo-50 py-16"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
+        <h2
+          class="text-3xl font-bold text-center mb-12"
+        >
+          UPCOMING EVENTS
+        </h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+          >
+            <img
+              alt="World Travel Expo 2025"
+              class="h-48 w-full object-cover"
+              src="test-image-stub"
+            />
+            <div
+              class="p-6"
+            >
+              <h3
+                class="text-xl font-semibold mb-2"
+              >
+                World Travel Expo 2025
+              </h3>
+              <p
+                class="text-gray-500 mb-4"
+              >
+                Date: June 15, 2025
+              </p>
+              <p
+                class="text-gray-700 mb-4"
+              >
+                Join thousands of travelers and tourism experts at the global expo in Berlin. Discover new destinations and experiences!
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+          >
+            <img
+              alt="Tokyo Cherry Blossom Festival"
+              class="h-48 w-full object-cover"
+              src="test-image-stub"
+            />
+            <div
+              class="p-6"
+            >
+              <h3
+                class="text-xl font-semibold mb-2"
+              >
+                Tokyo Cherry Blossom Festival
+              </h3>
+              <p
+                class="text-gray-500 mb-4"
+              >
+                Date: March 25, 2025
+              </p>
+              <p
+                class="text-gray-700 mb-4"
+              >
+                Experience the breathtaking beauty of cherry blossoms in full bloom across Japan's capital city.
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+          >
+            <img
+              alt="Rio Carnival Experience"
+              class="h-48 w-full object-cover"
+              src="test-image-stub"
+            />
+            <div
+              class="p-6"
+            >
+              <h3
+                class="text-xl font-semibold mb-2"
+              >
+                Rio Carnival Experience
+              </h3>
+              <p
+                class="text-gray-500 mb-4"
+              >
+                Date: February 10, 2025
+              </p>
+              <p
+                class="text-gray-700 mb-4"
+              >
+                Add the vibrant Rio Carnival to your wishlist and dance your way through the most colorful celebration in the world!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="bg-gray-50 dark:bg-gray-900 mt-auto"
+    >
+      <div
+        class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8"
+      >
+        <div
+          class="md:flex md:justify-between"
+        >
+          <div
+            class="mb-6 md:mb-0"
+          >
+            <span
+              class="text-sm text-gray-500 dark:text-gray-400"
+            >
+              © 2025 
+              <a
+                class="hover:underline"
+                href="mailto:abishaan.thiyagalingam@gmail.com"
+              >
+                Abishaan Thiyagalingam
+              </a>
+              . All Rights Reserved.
+            </span>
+          </div>
+          <div
+            class="flex space-x-6"
+          >
+            <a
+              class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+              href="mailto:abishaan.thiyagalingam@gmail.com"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                />
+              </svg>
+              <span
+                class="sr-only"
+              >
+                Email
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</DocumentFragment>
+`;
