@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Header from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -8,6 +8,31 @@ const CountryDetail = () => {
   const navigate = useNavigate();
   const country = state?.country;
   const [isMapModalOpen, setIsMapModalOpen] = useState(false);
+  const [borderCountries, setBorderCountries] = useState([]);
+  const [loadingBorders, setLoadingBorders] = useState(false);
+
+  useEffect(() => {
+    if (country?.borders?.length > 0) {
+      const fetchBorderCountries = async () => {
+        try {
+          setLoadingBorders(true);
+          const response = await fetch(
+            `https://restcountries.com/v3.1/alpha?codes=${country.borders.join(
+              ","
+            )}`
+          );
+          const data = await response.json();
+          setBorderCountries(data);
+        } catch (error) {
+          console.error("Error fetching border countries:", error);
+        } finally {
+          setLoadingBorders(false);
+        }
+      };
+
+      fetchBorderCountries();
+    }
+  }, [country]);
 
   if (!country) {
     return (
@@ -216,6 +241,45 @@ const CountryDetail = () => {
                     </div>
                   </div>
 
+                  {/* Border Countries */}
+                  {country.borders?.length > 0 && (
+                    <div className="bg-gray-50 p-3 rounded-lg">
+                      <h3 className="text-md font-semibold text-gray-800 mb-2">
+                        Border Countries
+                      </h3>
+                      {loadingBorders ? (
+                        <div className="flex justify-center">
+                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-indigo-600"></div>
+                        </div>
+                      ) : borderCountries.length > 0 ? (
+                        <div className="flex flex-wrap gap-2">
+                          {borderCountries.map((borderCountry) => (
+                            <button
+                              key={borderCountry.cca3}
+                              onClick={() =>
+                                navigate(`/country/${borderCountry.cca3}`, {
+                                  state: { country: borderCountry },
+                                })
+                              }
+                              className="flex items-center gap-2 px-3 py-1 bg-white text-indigo-600 rounded-lg hover:bg-indigo-50 transition shadow-sm text-sm border border-gray-200"
+                            >
+                              <img
+                                src={borderCountry.flags.svg}
+                                alt={`${borderCountry.name.common} flag`}
+                                className="w-4 h-3 object-cover"
+                              />
+                              {borderCountry.name.common}
+                            </button>
+                          ))}
+                        </div>
+                      ) : (
+                        <p className="text-sm">
+                          Failed to load border countries
+                        </p>
+                      )}
+                    </div>
+                  )}
+
                   {/* Additional Info */}
                   <div className="bg-gray-50 p-3 rounded-lg">
                     <h3 className="text-md font-semibold text-gray-800 mb-2">
@@ -268,69 +332,78 @@ const CountryDetail = () => {
 
       {/* OpenStreetMap Modal */}
       {isMapModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] flex flex-col">
-            <div className="flex justify-between items-center p-4 border-b">
-              <h3 className="text-lg font-semibold">
-                Map of {country.name.common}
-              </h3>
-              <button
-                onClick={() => setIsMapModalOpen(false)}
-                className="text-gray-500 hover:text-gray-700"
-              >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+        <>
+          {/* Blurred overlay */}
+          <div
+            className="fixed inset-0 bg-opacity-50 backdrop-blur-sm z-40"
+            onClick={() => setIsMapModalOpen(false)}
+          ></div>
+
+          {/* Modal content */}
+          <div className="fixed inset-0 flex items-center justify-center p-4 z-50">
+            <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] flex flex-col">
+              <div className="flex justify-between items-center p-4 border-b">
+                <h3 className="text-lg font-semibold">
+                  Map of {country.name.common}
+                </h3>
+                <button
+                  onClick={() => setIsMapModalOpen(false)}
+                  className="text-gray-500 hover:text-gray-700"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div className="flex-grow">
-              <iframe
-                src={openStreetMapUrl}
-                title={`${country.name.common} on OpenStreetMap`}
-                className="w-full h-full min-h-[400px]"
-                frameBorder="0"
-                allowFullScreen
-              />
-            </div>
-            <div className="p-4 border-t bg-gray-50 rounded-b-lg flex justify-end">
-              <a
-                href={`https://www.openstreetmap.org/?mlat=${
-                  country.latlng?.[0] || ""
-                }&mlon=${country.latlng?.[1] || ""}#map=5/${
-                  country.latlng?.[0] || ""
-                }/${country.latlng?.[1] || ""}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-white text-indigo-600 rounded-md hover:bg-indigo-50 transition-all shadow-sm border border-gray-200 hover:border-indigo-200 hover:shadow-md text-sm font-medium"
-              >
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div className="flex-grow">
+                <iframe
+                  src={openStreetMapUrl}
+                  title={`${country.name.common} on OpenStreetMap`}
+                  className="w-full h-full min-h-[400px]"
+                  frameBorder="0"
+                  allowFullScreen
+                />
+              </div>
+              <div className="p-4 border-t bg-gray-50 rounded-b-lg flex justify-end">
+                <a
+                  href={`https://www.openstreetmap.org/?mlat=${
+                    country.latlng?.[0] || ""
+                  }&mlon=${country.latlng?.[1] || ""}#map=5/${
+                    country.latlng?.[0] || ""
+                  }/${country.latlng?.[1] || ""}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-white text-indigo-600 rounded-md hover:bg-indigo-50 transition-all shadow-sm border border-gray-200 hover:border-indigo-200 hover:shadow-md text-sm font-medium"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-                Open in new tab
-              </a>
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                  Open in new tab
+                </a>
+              </div>
             </div>
           </div>
-        </div>
+        </>
       )}
 
       <Footer />
